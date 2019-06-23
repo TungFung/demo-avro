@@ -19,6 +19,7 @@ public class GenericDemo {
 
     public static void main(String[] args) throws Exception {
         Schema schema = new Schema.Parser().parse(new File("src/main/avro/user.avsc"));
+        System.out.println("Schema:" + schema.toString());
 
         GenericRecord user1 = new GenericData.Record(schema);
         user1.put("name", "Alyssa");
